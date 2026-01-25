@@ -1,337 +1,299 @@
-
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="light">
 
 <head>
-  <meta charset="UTF-8">
-  <title>OPOINI</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8">
+    <title>OPOINI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark" id="borde_nav">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
-          <path d="M50 5L85 20V45C85 65 70 85 50 95C30 85 15 65 15 45V20L50 5Z" fill="#1A237E" stroke="#FFD700"
-            stroke-width="3" />
-          <rect x="35" y="45" width="30" height="4" fill="#AA151B" />
-          <rect x="35" y="49" width="30" height="4" fill="#F1BF00" />
-          <rect x="35" y="53" width="30" height="4" fill="#AA151B" />
-          <path d="M40 30L50 20L60 30" stroke="#FFD700" stroke-width="4" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-        <strong>OPOINI</strong>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Convocatorias</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Recursos de Estudio
+    <nav class="navbar navbar-expand-lg navbar-dark" id="borde_nav">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="me-2">
+                    <path d="M50 5L85 20V45C85 65 70 85 50 95C30 85 15 65 15 45V20L50 5Z" fill="#1A237E"
+                        stroke="#FFD700" stroke-width="3" />
+                    <rect x="35" y="45" width="30" height="4" fill="#AA151B" />
+                    <rect x="35" y="49" width="30" height="4" fill="#F1BF00" />
+                    <rect x="35" y="53" width="30" height="4" fill="#AA151B" />
+                    <path d="M40 30L50 20L60 30" stroke="#FFD700" stroke-width="4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <strong>OPOINI</strong>
             </a>
-            <ul class="dropdown-menu shadow">
-              <li><a class="dropdown-item" href="#">Temario Actualizado</a></li>
-              <li><a class="dropdown-item" href="#">Test por Temas</a></li>
-              <li><a class="dropdown-item" href="#">Preparación Física</a></li>
-              <li><a class="dropdown-item" href="#">Psicotécnicos</a></li>
-            </ul>
-          </li>
-        </ul>
 
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 bg-transparent text-white" type="search" placeholder="Buscar tema..."
-            aria-label="Search">
-          <button class="btn btn-outline-warning" type="submit">Buscar</button>
-        </form>
-        <button class="btn btn-link text-warning ms-lg-3" id="boton_claro" type="button">
-                 Modo Claro
-        </button>
-
-      </div>
-    </div>
-  </nav>
-
-  <main class="container mt-5">
-
-    <div class="row align-items-start gx-5">
-
-      <div class="col-lg-7 mb-5">
-
-        <h3 class="text-warning mb-2">Requisitos y Fases</h3>
-        <div class="table-responsive mb-3">
-          <table class="table shadow bg-dark text-white table-hover table-dark border">
-            <thead class="table-dark">
-              <tr>
-                <th>#</th>
-                <th>Dato Clave</th>
-                <th>Detalles de la Oposición</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Requisito de Edad</td>
-                <td>Tener 18 años y no exceder la edad máxima de jubilación.</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Titulación Requerida</td>
-                <td>Título de Bachiller o equivalente (para Escala Básica).</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Nacionalidad</td>
-                <td>Tener la nacionalidad española.</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Pruebas Físicas</td>
-                <td>Circuito de agilidad, dominadas (hombres)/aguante (mujeres) y 1km.</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Examen Teórico</td>
-                <td>Cuestionario de 100 preguntas sobre el temario oficial (45 temas).</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Prueba de Idioma</td>
-                <td>Obligatorio (Inglés o Francés) con nivel básico-intermedio.</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Reconocimiento Médico</td>
-                <td>Cuadro de exclusiones médicas (visión, audición, patologías, etc.).</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>Test Psicotécnicos</td>
-                <td>Evaluación de aptitudes intelectuales y perfil de personalidad.</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Entrevista Personal</td>
-                <td>Valoración de idoneidad y competencias para el puesto.</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>Permiso de Conducir</td>
-                <td>Estar en posesión del permiso de clase B en vigor.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div id="elCarrusel" class="carousel slide shadow mb-5" data-bs-ride="carousel">
-          <div class="carousel-inner rounded">
-            <div class="carousel-item active">
-              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80"
-                class="d-block w-100" alt="Estudio Teórico">
-            </div>
-            <div class="carousel-item">
-              <img
-                src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&h=600&q=80"
-                class="d-block w-100" alt="Pista de atletismo">
-            </div>
-            <div class="carousel-item">
-              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80"
-                class="d-block w-100" alt="Juramento">
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#elCarrusel" data-bs-slide="prev">
-
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#elCarrusel" data-bs-slide="next">
 
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-5">
-        <div class="card border-secondary mb-4 mt-5">
-          <div class="card-header bg-dark  border-warning">
-            <h4 class="mb-0 text-warning"><i class="bi bi-pencil-square me-2"></i>Inscripción a Simulacro</h4>
-          </div>
-          <div class="card-body">
-            <form id="formInscripcion" >
-              <div class="mb-3">
-                <label for="nombreCompleto" class="form-label">Nombre y Apellidos</label>
-                <input type="text" class="form-control border-secondary" id="nombreCompleto"
-                  placeholder="Ej. Juan Pérez" required>
-              </div>
-              <div class="mb-3">
-                 <label for="fechaNacimiento" class="form-label ">Fecha de Nacimiento</label>
-                <input type="date" class="form-control border-secondary " id="fechaNacimiento" value="2000-01-01" required>
-            </div>
-              <div class="mb-3">
-                <label for="emailUsuario" class="form-label">Correo Electrónico</label>
-                <input type="email" class="form-control  border-secondary" id="emailUsuario"
-                  placeholder="nombre@ejemplo.com" required>
-              </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Convocatorias</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Recursos de Estudio
+                        </a>
+                        <ul class="dropdown-menu shadow">
+                            <li><a class="dropdown-item" href="#">Temario Actualizado</a></li>
+                            <li><a class="dropdown-item" href="#">Test por Temas</a></li>
+                            <li><a class="dropdown-item" href="#">Preparación Física</a></li>
+                            <li><a class="dropdown-item" href="#">Psicotécnicos</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
-              <div class="mb-3">
-                <label for="escalaOpo" class="form-label">Escala a la que oposita</label>
-                <select class="form-select  border-secondary" id="escalaOpo">
-                  <option value="basica" >Escala Básica</option>
-                  <option value="ejecutiva">Escala Ejecutiva</option>
-                </select>
-              </div>
-
-              <div class="mb-3">
-                <label class="form-label d-block">Nivel de preparación actual</label>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="nivelEstudio" id="nivel1" value="principiante" checked>
-                  <label class="form-check-label" for="nivel1">Principiante</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="nivelEstudio" id="nivel2" value="avanzado">
-                  <label class="form-check-label" for="nivel2">Avanzado</label>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="comentarios" class="form-label">Observaciones médicas o físicas</label>
-                <textarea class="form-control  border-secondary" id="comentarios" rows="3"
-                  placeholder="Indica si tienes alguna lesión o duda específica..."></textarea>
-              </div>
-
-              <div class="mb-4 form-check">
-                <input type="checkbox" class="form-check-input" id="checkPrivacidad" required>
-                <label class="form-check-label small" for="checkPrivacidad">He leído y acepto el compromiso de
-                  confidencialidad de la academia.</label>
-              </div>
-              <div class="d-flex gap-2">
-              <button type="submit" class="btn btn-warning w-100 fw-bold shadow">
-                ENVIAR SOLICITUD <i class="bi bi-send-fill ms-2"></i>
-              </button>
-              <button type="reset" id="btnLimpiar" class="btn btn-outline-secondary fw-bold shadow">
-                LIMPIAR
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 bg-transparent text-white" type="search"
+                        placeholder="Buscar tema..." aria-label="Search">
+                    <button class="btn btn-outline-warning" type="submit">Buscar</button>
+                </form>
+                <button class="btn btn-link text-warning ms-lg-3" id="boton_claro" type="button">
+                    Modo Claro
                 </button>
+
             </div>
-            </form>
-          </div>
         </div>
-      </div>
+    </nav>
 
-    </div>
+    <main class="container mt-5">
 
-  </main>
+        <div class="row align-items-start gx-5">
 
-  <section class="container my-5 py-5">
-    <div class="row gx-4 gy-4 text-center">
+            <div class="col-lg-7 mb-5">
 
-      <div class="col-md-4">
-        <div class="card h-100 border-warning p-3 card-hover">
-          <div class="card-body">
-            <div class="mb-3">
-              <i class="bi bi-mortarboard-fill text-warning fs-1"></i>
+                <h3 class="text-warning mb-2">Requisitos y Fases</h3>
+                <div class="table-responsive mb-3">
+                    <table class="table shadow bg-dark text-white table-hover table-dark border">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Dato Clave</th>
+                                <th>Detalles de la Oposición</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cuerpoTabla">
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="elCarrusel" class="carousel slide shadow mb-5" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80"
+                                class="d-block w-100" alt="Estudio Teórico">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&h=600&q=80"
+                                class="d-block w-100" alt="Pista de atletismo">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80"
+                                class="d-block w-100" alt="Juramento">
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#elCarrusel"
+                            data-bs-slide="prev">
+
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#elCarrusel"
+                            data-bs-slide="next">
+
+                        </button>
+                    </div>
+                </div>
             </div>
-            <h4 class="card-title mb-3">Servicios</h4>
-            <p class="card-text">
-              Preparación integral: clases online en directo, simulacros de examen reales y tutorías personalizadas con
-              inspectores en activo.
-            </p>
-          </div>
-        </div>
-      </div>
+            <div class="col-lg-5">
+                <div class="card border-secondary mb-4 mt-5">
+                    <div class="card-header bg-dark  border-warning">
+                        <h4 class="mb-0 text-warning"><i class="bi bi-pencil-square me-2"></i>Inscripción a Simulacro
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="formInscripcion">
+                            <div class="mb-3">
+                                <label for="nombreCompleto" class="form-label">Nombre y Apellidos</label>
+                                <input type="text" class="form-control border-secondary" id="nombreCompleto"
+                                    placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fechaNacimiento" class="form-label ">Fecha de Nacimiento</label>
+                                <input type="date" class="form-control border-secondary " id="fechaNacimiento"
+                                    value="2000-01-01" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="emailUsuario" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control  border-secondary" id="emailUsuario"
+                                    placeholder="nombre@ejemplo.com" required>
+                            </div>
 
-      <div class="col-md-4">
-        <div class="card h-100  border-warning  p-3 card-hover">
-          <div class="card-body">
-            <div class="mb-3">
-              <i class="bi bi-shield-check text-warning fs-1"></i>
+                            <div class="mb-3">
+                                <label for="escalaOpo" class="form-label">Escala a la que oposita</label>
+                                <select class="form-select  border-secondary" id="escalaOpo">
+                                    <option value="basica">Escala Básica</option>
+                                    <option value="ejecutiva">Escala Ejecutiva</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label d-block">Nivel de preparación actual</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="nivelEstudio" id="nivel1"
+                                        value="principiante" checked>
+                                    <label class="form-check-label" for="nivel1">Principiante</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="nivelEstudio" id="nivel2"
+                                        value="avanzado">
+                                    <label class="form-check-label" for="nivel2">Avanzado</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="comentarios" class="form-label">Observaciones médicas o físicas</label>
+                                <textarea class="form-control  border-secondary" id="comentarios" rows="3"
+                                    placeholder="Indica si tienes alguna lesión o duda específica..."></textarea>
+                            </div>
+
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" class="form-check-input" id="checkPrivacidad" required>
+                                <label class="form-check-label small" for="checkPrivacidad">He leído y acepto el
+                                    compromiso de
+                                    confidencialidad de la academia.</label>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button type="submit" class="btn btn-warning w-100 fw-bold shadow">
+                                    ENVIAR SOLICITUD <i class="bi bi-send-fill ms-2"></i>
+                                </button>
+                                <button type="reset" id="btnLimpiar" class="btn btn-outline-secondary fw-bold shadow">
+                                    LIMPIAR
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <h4 class="card-title mb-3">Características</h4>
-            <p class="card-text">
-              Temario actualizado día a día con la normativa vigente y plataforma de test con más de 15.000 preguntas
-              retroalimentadas.
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="card h-100 border-warning  p-3 card-hover">
-          <div class="card-body">
-            <div class="mb-3">
-              <i class="bi bi-graph-up-arrow text-warning fs-1"></i>
+        </div>
+
+    </main>
+
+    <section class="container my-5 py-5">
+        <div class="row gx-4 gy-4 text-center">
+
+            <div class="col-md-4">
+                <div class="card h-100 border-warning p-3 card-hover">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-mortarboard-fill text-warning fs-1"></i>
+                        </div>
+                        <h4 class="card-title mb-3">Servicios</h4>
+                        <p class="card-text">
+                            Preparación integral: clases online en directo, simulacros de examen reales y tutorías
+                            personalizadas con
+                            inspectores en activo.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <h4 class="card-title mb-3">Funcionalidades</h4>
-            <p class="card-text ">
-              App de seguimiento de rendimiento: analiza tus fallos, compite en el ranking nacional y mide tu progreso
-              por temas específicos.
-            </p>
-          </div>
+
+            <div class="col-md-4">
+                <div class="card h-100  border-warning  p-3 card-hover">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-shield-check text-warning fs-1"></i>
+                        </div>
+                        <h4 class="card-title mb-3">Características</h4>
+                        <p class="card-text">
+                            Temario actualizado día a día con la normativa vigente y plataforma de test con más de
+                            15.000 preguntas
+                            retroalimentadas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-warning  p-3 card-hover">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-graph-up-arrow text-warning fs-1"></i>
+                        </div>
+                        <h4 class="card-title mb-3">Funcionalidades</h4>
+                        <p class="card-text ">
+                            App de seguimiento de rendimiento: analiza tus fallos, compite en el ranking nacional y mide
+                            tu progreso
+                            por temas específicos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
+    </section>
+    <footer class="py-4 mt-3 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-1 fw-bold">Autor: Iñigo Hernandez</p>
+                    <p class="mb-1 small">
+                        Web para practica de Bootstrap
+                    </p>
+                    <p class="mb-2 small">
 
-    </div>
-  </section>
-  <footer class="py-4 mt-3 text-white">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-center text-md-start">
-          <p class="mb-1 fw-bold">Autor: Iñigo Hernandez</p>
-          <p class="mb-1 small">
-            Web para practica de Bootstrap
-          </p>
-          <p class="mb-2 small">
-
-          </p>
-          <p class="mb-0">
-            © 2026 Iñigo Hernandez. Todos los derechos reservados.
-          </p>
+                    </p>
+                    <p class="mb-0">
+                        © 2026 Iñigo Hernandez. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-decoration-none me-3">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="text-decoration-none me-3">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-          <a href="#" class="text-decoration-none me-3">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="#" class="text-decoration-none me-3">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="#" class="text-decoration-none">
-            <i class="bi bi-twitter-x"></i>
-          </a>
+    </footer>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toastLimpiar" class="toast">
+            <div class="d-flex">
+                <div class="toast-body">Se han resetado los campos del formulario</div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
         </div>
-      </div>
+        <div id="toastEnvio" class="toast">
+            <div class="d-flex">
+                <div class="toast-body">
+                    ¡Formulario enviado con éxito!
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
     </div>
-  </footer>
 
-  <div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="toastLimpiar" class="toast">
-    <div class="d-flex">
-      <div class="toast-body">Se han resetado los campos del formulario</div>
-      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
-    </div>
-  </div>
-  <div id="toastEnvio" class="toast">
-    <div class="d-flex">
-      <div class="toast-body">
-        ¡Formulario enviado con éxito!
-      </div>
-      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast"></button>
-    </div>
-  </div>
-</div>
 
-  
-</div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="parte1.js"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="parte1.js"></script>
+    <script src="parte2.js"></script>
 </body>
 
 </html>
- 

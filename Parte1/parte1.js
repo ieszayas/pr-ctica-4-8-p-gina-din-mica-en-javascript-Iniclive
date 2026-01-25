@@ -5,7 +5,7 @@ const html = document.documentElement;
 
 // Función para aplicar el tema
 function cambiarTema(tema) {
-    html.setAttribute('data-bs-theme', tema);  
+    html.setAttribute('data-bs-theme', tema);
     localStorage.setItem('tema', tema);
 
     if (tema === 'dark') {
@@ -35,12 +35,12 @@ cambiarTema(temaGuardado);
 if (btn) { //Este if previene problemas al cargar el js en caso de que se elimine el boton
     btn.addEventListener('click', () => {
         const temaActual = html.getAttribute('data-bs-theme'); //Estp es una etiqueta de boostrap para el tema
-    let temaNuevo;
-    if (temaActual === 'light') {
-    temaNuevo = 'dark';
-    } else {
-    temaNuevo = 'light';
-    }
+        let temaNuevo;
+        if (temaActual === 'light') {
+            temaNuevo = 'dark';
+        } else {
+            temaNuevo = 'light';
+        }
         cambiarTema(temaNuevo);
     });
 }
@@ -56,7 +56,7 @@ const campoNombre = document.getElementById('nombreCompleto');
 
 function validarNombre() {
     const regexNombre = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
-    
+
     // Buscamos si ya hay un mensaje de error previo para no duplicarlo
     let mensajeError = campoNombre.parentNode.querySelector('.mensaje_error'); /*Al usar parentNode solo busca dentro del div de nombre*/
 
@@ -97,7 +97,7 @@ const campoCorreo = document.getElementById('emailUsuario');
 
 function validarCorreo() {
     const regexEmail = /^[^\s@]+@[^\s@]+\.(com|es)$/;
-    
+
     // Buscamos si ya hay un mensaje de error previo para no duplicarlo
     let mensajeError = campoCorreo.parentNode.querySelector('.mensaje_error'); /*Al usar parentNode solo busca dentro del div de mail*/
 
@@ -150,13 +150,13 @@ function validarEdad() {
     // 2. Cálculo de la edad
     const hoy = new Date();
     const fechaNac = new Date(fechaValor);
-    
+
     let edad = hoy.getFullYear() - fechaNac.getFullYear();
     const mes = hoy.getMonth() - fechaNac.getMonth();
 
     // Ajuste por si aún no ha cumplido años en el año actual
     if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) { //hoy.getDate() < fechaNac.getDate() esto compara el dia si es el mismo mes
-        edad--; 
+        edad--;
     }
 
     // 3. Validación de 18 años
@@ -190,12 +190,12 @@ const toastElement = document.getElementById('toastLimpiar');
 // 2. Escuchar el evento click
 
 if (btnLimpiar && toastElement) { /*Igual que antes, verifica la existencia de los elementos*/
-    
+
     btnLimpiar.addEventListener('click', () => {
-        
+
         // Inicializar el componente Toast de Bootstrap
         const toast = new bootstrap.Toast(toastElement);
-        
+
         // Mostrar la notificación
         toast.show();
 
@@ -215,8 +215,8 @@ if (btnLimpiar && toastElement) { /*Igual que antes, verifica la existencia de l
         let errorFecha = campoFecha.parentNode.querySelector('.mensaje_error');
         if (errorFecha) errorFecha.remove();
         campoFecha.value = fechaFija;
-        
-    
+
+
     });
 }
 
@@ -224,25 +224,42 @@ if (btnLimpiar && toastElement) { /*Igual que antes, verifica la existencia de l
 
 const formulario = document.getElementById('formInscripcion');
 const toastEnvioElement = document.getElementById('toastEnvio');
+const listaUsuarios = [];
 
 if (formulario && toastEnvioElement) {
     formulario.addEventListener('submit', (event) => {
-        
+
         event.preventDefault();
         validarNombre();
         validarCorreo();
         validarEdad();
-    const campos = [campoNombre, campoCorreo, campoFecha];
-    const todoValido = campos.every(input => input.classList.contains('is-valid'));
+        const campos = [campoNombre, campoCorreo, campoFecha];
+        const todoValido = campos.every(input => input.classList.contains('is-valid'));
 
-    if (todoValido) {
-        const toastEnvio = bootstrap.Toast.getOrCreateInstance(toastEnvioElement);
-        toastEnvio.show();
-        
-        
-    } else {
-        // Si falta algo, el usuario verá los mensajes de error en rojo automáticamente
-        console.log("Validación fallida: revisa los campos en rojo.");
-    }
+        if (todoValido) {
+
+            // Si se validan todos los campos pasamos a guardar el objeto
+            const nuevoUsuario = {
+                nombre: campoNombre.value,
+                email: campoCorreo.value,
+                fechaNacimiento: campoFecha.value,
+                escala: document.getElementById('escalaOpo').value,
+                nivel: document.querySelector('input[name="nivelEstudio"]:checked').value,
+                observaciones: document.getElementById('comentarios').value,
+            };
+            listaUsuarios.push(nuevoUsuario);
+            // 3. MOSTRAR EL ARRAY por consola en formato tabla
+
+            console.table(listaUsuarios);
+
+            // Toast de envio
+            const toastEnvio = bootstrap.Toast.getOrCreateInstance(toastEnvioElement);
+            toastEnvio.show();
+
+
+        } else {
+            // Si falta algo, el usuario verá los mensajes de error en rojo automáticamente
+            console.log("Validación fallida: revisa los campos en rojo.");
+        }
     });
 }
