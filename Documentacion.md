@@ -28,10 +28,9 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 
 *(Definidos mediante variables CSS)*
 
-📸 **Espacio para imagen:**
 
 ```
-![Paleta de colores](ruta/a/imagen.png)
+![Paleta de colores](assets/images/paleta_colores.png)
 ```
 
 ---
