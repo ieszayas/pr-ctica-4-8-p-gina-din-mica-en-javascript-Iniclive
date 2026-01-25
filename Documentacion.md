@@ -93,7 +93,7 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Formato 24h
 * Implementado con `setInterval`
 
-![Reloj digital](assets/images/relog_digi)
+![Reloj digital](assets/images/relog_digi.png)
 
 ---
 
