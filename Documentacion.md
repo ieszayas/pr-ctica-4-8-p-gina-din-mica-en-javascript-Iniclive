@@ -37,13 +37,9 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Componentes con bordes dorados
 * Animaciones suaves en hover
 
-📸 **Espacio para imagen:**
 
-```
-![Estilo general de la web](ruta/a/imagen.png)
-```
+![Estilo general de la web](assets/images/estilo_general.png)
 
----
 
 ## 4. Estructura de la Web
 
@@ -60,9 +56,9 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 
 📸 **Espacio para imagen:**
 
-```
-![Navbar](ruta/a/imagen.png)
-```
+
+![Navbar](assets/images/navbarl.png)
+
 
 ---
 
@@ -74,11 +70,9 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 
 📸 **Espacio para imagen:**
 
-```
-![Hero section](ruta/a/imagen.png)
-```
 
----
+![Hero section](assets/images/hero_section.png)
+
 
 ## 5. Funcionalidades Dinámicas
 
@@ -90,11 +84,10 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 
 📸 **Espacio para imagen:**
 
-```
-![Modo claro y oscuro](ruta/a/imagen.png)
-```
 
----
+![Modo claro y oscuro](ruta/a/imagen.png)
+
+
 
 ### 5.2 Reloj Digital
 
