@@ -59,3 +59,35 @@ if (placa) {
         activo = false;
     });
 }
+
+function calcularNotas() {
+    const circuito = parseFloat(document.getElementById('valCircuito').value);
+    const dominadas = parseInt(document.getElementById('valDominadas').value);
+    const carrera = document.getElementById('valCarrera').value; // Formato "3:25"
+
+    // 1. Lógica simplificada de puntos (Ejemplo basado en baremo hombre)
+    let pCircuito = circuito <= 8.2 ? 10 : (circuito >= 11.5 ? 0 : 5); 
+    let pDominadas = dominadas >= 17 ? 10 : (dominadas <= 5 ? 0 : 5);
+    
+    // Convertir carrera "3:25" a segundos totales
+    const partes = carrera.split(':');
+    const segTotales = (parseInt(partes[0]) * 60) + parseInt(partes[1]);
+    let pCarrera = segTotales <= 189 ? 10 : (segTotales >= 230 ? 0 : 5);
+
+    // 2. Calcular Media
+    const media = ((pCircuito + pDominadas + pCarrera) / 3).toFixed(2);
+    
+    // 3. Mostrar Resultado
+    const resDiv = document.getElementById('resultadoCalculo');
+    resDiv.classList.remove('d-none');
+    
+    let color = media >= 5 ? 'alert-success' : 'alert-danger';
+    resDiv.className = `alert ${color} mt-3`;
+    
+    resDiv.innerHTML = `
+        <strong>Resultados:</strong><br>
+        Agilidad: ${pCircuito} pts | Dominadas: ${pDominadas} pts | Carrera: ${pCarrera} pts<br>
+        <hr>
+        <h4 class="mb-0 text-center">MEDIA FINAL: ${media}</h4>
+    `;
+}

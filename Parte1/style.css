@@ -115,3 +115,16 @@ box-shadow: 0 10px 40px var(--cnp-dorado) !important; /* Sombra dorada intensa *
 .placa-policia:active {
     cursor: grabbing; /* Cambia el cursor al apretar */
 }
+.btn-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1050; /* Por encima de todo, incluso de la placa */
+    border-radius: 50px; /* Estilo redondeado moderno */
+    padding: 15px 25px;
+    transition: transform 0.3s ease;
+}
+
+.btn-flotante:hover {
+    transform: scale(1.1);
+}
