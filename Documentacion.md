@@ -1,6 +1,5 @@
 # Documentación del Proyecto **OPOINI**
-## Test imagen
-![Test](assets/images/paleta_colores.png)
+
 ## 1. Descripción General
 
 OPOINI es una web orientada a la preparación de oposiciones, desarrollada como práctica avanzada de **HTML, CSS, JavaScript y Bootstrap 5**. Combina un diseño visual corporativo con múltiples funcionalidades interactivas enfocadas al usuario.
@@ -29,8 +28,7 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 
 *(Definidos mediante variables CSS)*
 
-
-assets/images/paleta_colores.png
+![Paleta de colores](assets/images/paleta_colores.png)
 
 ### 3.2 Estilo General
 
