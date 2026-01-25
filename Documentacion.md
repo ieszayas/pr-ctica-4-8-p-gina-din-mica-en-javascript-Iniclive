@@ -54,8 +54,6 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Reloj digital en tiempo real
 * Botón de cambio de tema claro/oscuro
 
-📸 **Espacio para imagen:**
-
 
 ![Navbar](assets/images/navbar.png)
 
@@ -67,8 +65,6 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Presentación principal de la plataforma
 * Llamada a la acción (CTA)
 * Imagen y mensaje motivacional
-
-📸 **Espacio para imagen:**
 
 
 ![Hero section](assets/images/hero_section.png)
@@ -82,10 +78,12 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Persistencia con `localStorage`
 * Cambio dinámico del texto del botón
 
-📸 **Espacio para imagen:**
 
 
-![Modo claro y oscuro](ruta/a/imagen.png)
+![Modo claro y oscuro](assets/images/boton_claro.png)
+![Modo claro y oscuro](assets/images/modo_claro.png)
+![Modo claro y oscuro](assets/images/boton_oscuro.png)
+![Modo claro y oscuro](assets/images/modo_oscuro.png)
 
 
 
@@ -95,11 +93,7 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Formato 24h
 * Implementado con `setInterval`
 
-📸 **Espacio para imagen:**
-
-```
-![Reloj digital](ruta/a/imagen.png)
-```
+![Reloj digital](assets/images/relog_digi)
 
 ---
 
@@ -109,24 +103,18 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Búsqueda y filtrado por texto
 * Actualización sin recargar la página
 
-📸 **Espacio para imagen:**
+![Tabla dinámica](assets/images/tabla.png)
 
-```
-![Tabla dinámica](ruta/a/imagen.png)
-```
-
----
 
 ### 5.4 Buscador de Tabla
 
 * Filtra por clave o descripción
 * Integrado en el navbar
 
-📸 **Espacio para imagen:**
 
-```
-![Buscador de tabla](ruta/a/imagen.png)
-```
+![Buscador de tabla](assets/images/filtro.png)
+![Buscador de tabla](assets/images/tabla_filtrada.png)
+
 
 ---
 
@@ -134,13 +122,8 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 
 * Bootstrap Carousel
 * Imágenes responsivas
-* Efecto zoom y sombreado
 
-📸 **Espacio para imagen:**
-
-```
-![Carrusel](ruta/a/imagen.png)
-```
+![Carrusel](assets/images/carrousel.png)
 
 ---
 
@@ -156,11 +139,8 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Observaciones
 * Checkbox de aceptación
 
-📸 **Espacio para imagen:**
 
-```
-![Formulario de inscripción](ruta/a/imagen.png)
-```
+![Formulario de inscripción](assets/images/formulario.png)
 
 ---
 
@@ -171,11 +151,10 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Validación de mayoría de edad (+18)
 * Feedback visual con Bootstrap
 
-📸 **Espacio para imagen:**
 
-```
-![Validaciones del formulario](ruta/a/imagen.png)
-```
+
+![Validaciones del formulario](assets/images/formulario_fallo.png)
+![Validaciones del formulario](assets/images/formulario_correcto.png)
 
 ---
 
@@ -186,11 +165,10 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Limpieza de estados y mensajes de error
 * Almacenamiento temporal en array JS
 
-📸 **Espacio para imagen:**
 
-```
-![Toast de confirmación](ruta/a/imagen.png)
-```
+
+
+![Toast de confirmación](assets/images/limpiar.png)
 
 ---
 
@@ -203,11 +181,9 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Funcionalidades
 * Efecto hover con sombra dorada
 
-📸 **Espacio para imagen:**
 
-```
-![Cards informativas](ruta/a/imagen.png)
-```
+![Cards informativas](assets/images/cards.png)
+
 
 ---
 
@@ -217,11 +193,11 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Movimiento libre con mouse
 * Siempre visible sobre el contenido
 
-📸 **Espacio para imagen:**
 
-```
-![Placa draggable](ruta/a/imagen.png)
-```
+
+![Placa draggable](assets/images/placa1.png)
+![Placa draggable](assets/images/placa2.png)
+
 
 ---
 
@@ -233,11 +209,12 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Entrada de datos físicos
 * Cálculo automático de media
 
-📸 **Espacio para imagen:**
 
-```
-![Modal calculadora](ruta/a/imagen.png)
-```
+
+![Modal calculadora](assets/images/calculadora1.png)
+![Modal calculadora](assets/images/calculadora2.png)
+![Modal calculadora](assets/images/calculadora3.png)
+
 
 ---
 
@@ -247,11 +224,9 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Asignación de puntos
 * Resultado visual con alertas
 
-📸 **Espacio para imagen:**
 
-```
-![Resultado de cálculo](ruta/a/imagen.png)
-```
+![Resultado de cálculo](assets/images/calculadora4.png)
+
 
 ---
 
@@ -261,11 +236,11 @@ OPOINI es una web orientada a la preparación de oposiciones, desarrollada como 
 * Enlaces a redes sociales
 * Estilo consistente con el navbar
 
-📸 **Espacio para imagen:**
 
-```
-![Footer](ruta/a/imagen.png)
-```
+
+
+![Footer](assets/images/footer.png)
+
 
 ---
 
