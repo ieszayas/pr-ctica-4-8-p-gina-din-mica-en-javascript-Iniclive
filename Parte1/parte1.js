@@ -219,3 +219,30 @@ if (btnLimpiar && toastElement) { /*Igual que antes, verifica la existencia de l
     
     });
 }
+
+/*VALIDACION FINAL DEL FORMULARIO*/
+
+const formulario = document.getElementById('formInscripcion');
+const toastEnvioElement = document.getElementById('toastEnvio');
+
+if (formulario && toastEnvioElement) {
+    formulario.addEventListener('submit', (event) => {
+        
+        event.preventDefault();
+        validarNombre();
+        validarCorreo();
+        validarEdad();
+    const campos = [campoNombre, campoCorreo, campoFecha];
+    const todoValido = campos.every(input => input.classList.contains('is-valid'));
+
+    if (todoValido) {
+        const toastEnvio = bootstrap.Toast.getOrCreateInstance(toastEnvioElement);
+        toastEnvio.show();
+        
+        
+    } else {
+        // Si falta algo, el usuario verá los mensajes de error en rojo automáticamente
+        console.log("Validación fallida: revisa los campos en rojo.");
+    }
+    });
+}
