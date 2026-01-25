@@ -11,7 +11,7 @@ const datosTabla = [
     { clave: "Permiso de Conducir", detalle: "Estar en posesión del permiso de clase B en vigor." }
 ];
 
-function crearTabla() {
+/*function crearTabla() {
     const cuerpo = document.getElementById('cuerpoTabla');
 
     // Limpiamos la tabla antes de rellenar
@@ -29,5 +29,46 @@ function crearTabla() {
         cuerpo.appendChild(fila);
     });
 }
-
+*/
 crearTabla();
+
+function crearTabla(textoFiltro = "") {
+    const cuerpo = document.getElementById('cuerpoTabla');
+    if (!cuerpo) return;
+
+    cuerpo.innerHTML = "";
+
+    // Filtramos el array antes de recorrerlo
+    const busqueda = textoFiltro.toLowerCase();
+    const datosFiltrados = datosTabla.filter(elemento => { 
+        return elemento.clave.toLowerCase().includes(busqueda) || 
+               elemento.detalle.toLowerCase().includes(busqueda);
+    });
+
+    datosFiltrados.forEach((elemento, index) => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+            <th scope="row">${index + 1}</th>
+            <td>${elemento.clave}</td>
+            <td>${elemento.detalle}</td>
+        `;     
+        cuerpo.appendChild(fila);
+    });
+}
+
+const formBusqueda = document.getElementById('formBusqueda');
+const inputBusqueda = document.getElementById('inputBusqueda');
+
+if (formBusqueda && inputBusqueda) {
+    // 2. Escuchamos el evento 'submit' (clic en el botón o pulsar Enter)
+    formBusqueda.addEventListener('submit', (event) => {
+        // Bloqueamos la recarga de la página
+        event.preventDefault();
+
+        // 3. Obtenemos el valor y llamamos a la función de crear tabla
+        const textoAFiltrar = inputBusqueda.value.trim();
+        
+        console.log("Filtrando tabla por:", textoAFiltrar);
+        crearTabla(textoAFiltrar);
+    });
+}

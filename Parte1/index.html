@@ -54,11 +54,14 @@
                     </li>
                 </ul>
 
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2 bg-transparent text-white" type="search"
+                <form class="d-flex" role="search" id="formBusqueda">
+                    <input id="inputBusqueda" class="form-control me-2 bg-transparent text-white" type="search"
                         placeholder="Buscar tema..." aria-label="Search">
                     <button class="btn btn-outline-warning" type="submit">Buscar</button>
                 </form>
+                <div id="relojContainer" class="text-warning fw-bold ms-3 font-monospace" style="font-size: 1.2rem;">
+                    00:00:00
+                </div>
                 <button class="btn btn-link text-warning ms-lg-3" id="boton_claro" type="button">
                     Modo Claro
                 </button>
@@ -66,8 +69,31 @@
             </div>
         </div>
     </nav>
+    <section class="hero-section text-center py-5 mb-5 position-relative">
+        <div class="overlay"></div>
+        <div class="container position-relative z-1">
+            <a class="navbar-brand d-flex align-items-center justify-content-center text-white mb-3" href="#">
+                <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="me-3">
+                    <path d="M50 5L85 20V45C85 65 70 85 50 95C30 85 15 65 15 45V20L50 5Z" fill="#1A237E"
+                        stroke="#FFD700" stroke-width="3" />
+                    <rect x="35" y="45" width="30" height="4" fill="#AA151B" />
+                    <rect x="35" y="49" width="30" height="4" fill="#F1BF00" />
+                    <rect x="35" y="53" width="30" height="4" fill="#AA151B" />
+                    <path d="M40 30L50 20L60 30" stroke="#FFD700" stroke-width="4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <h1 class="display-4 fw-bold mb-0">OPOINI</h1>
+            </a>
 
-    <main class="container mt-5">
+            <p class="lead mb-4 d-none d-md-block">
+                Tu plataforma definitiva para preparar oposiciones. <br>
+                Accede a temarios actualizados, test simulacros y asesoramiento experto.
+            </p>
+            <a href="#formInscripcion" class="btn btn-warning btn-lg">¡Empieza a Prepararte!</a>
+        </div>
+    </section>
+    <main class="container mt-1">
 
         <div class="row align-items-start gx-5">
 
@@ -291,9 +317,22 @@
 
 
     </div>
+    <div id="placaDraggable" class="placa-policia d-none d-lg-block">
+    <svg width="200" height="200" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="me-3">
+                    <path d="M50 5L85 20V45C85 65 70 85 50 95C30 85 15 65 15 45V20L50 5Z" fill="#1A237E"
+                        stroke="#FFD700" stroke-width="3" />
+                    <rect x="35" y="45" width="30" height="4" fill="#AA151B" />
+                    <rect x="35" y="49" width="30" height="4" fill="#F1BF00" />
+                    <rect x="35" y="53" width="30" height="4" fill="#AA151B" />
+                    <path d="M40 30L50 20L60 30" stroke="#FFD700" stroke-width="4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="parte1.js"></script>
     <script src="parte2.js"></script>
+    <script src="parte3.js"></script>
 </body>
 
 </html>

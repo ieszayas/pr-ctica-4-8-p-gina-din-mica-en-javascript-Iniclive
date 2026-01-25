@@ -103,3 +103,15 @@ footer a:hover {
 box-shadow: 0 10px 40px var(--cnp-dorado) !important; /* Sombra dorada intensa */
 
 }
+.placa-policia {
+    position: absolute;
+    top: 340px; /* Posición inicial */
+    right: 240px;
+    cursor: grab; /* Cambia el cursor a una mano */
+    user-select: none; /* Evita que se seleccione el texto al arrastrar */
+    z-index: 1000; /* Siempre por encima de todo */
+}
+
+.placa-policia:active {
+    cursor: grabbing; /* Cambia el cursor al apretar */
+}
