@@ -66,8 +66,7 @@ box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 
 /*TABLA */
 .table {
-    /* Modificamos el espaciado interno (padding) de las celdas para que la tabla sea más legible */
-    --bs-table-bg: transparent; 
+    /* Modificamos el espaciado interno (padding) de las celdas para que la tabla sea más legible */ 
     margin-top: 20px;
 }
 .form-control::placeholder {

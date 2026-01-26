@@ -2,7 +2,7 @@
 
 const btn = document.getElementById('boton_claro');
 const html = document.documentElement;
-
+const tabla = document.getElementById('cuerpoTabla');
 // Función para aplicar el tema
 function cambiarTema(tema) {
     html.setAttribute('data-bs-theme', tema);
@@ -10,8 +10,14 @@ function cambiarTema(tema) {
 
     if (tema === 'dark') {
         btn.innerText = 'Modo Claro';
-    } else {
+        // Quitamos clases de luz, ponemos de oscuridad
+        tabla.classList.remove('bg-white', 'text-dark');
+        tabla.classList.add('bg-dark', 'text-white'); 
+    } else {    
         btn.innerText = 'Modo Oscuro';
+        // Quitamos clases de oscuridad, ponemos de luz
+        tabla.classList.remove('bg-dark', 'text-white');
+        tabla.classList.add('bg-white', 'text-dark');
     }
 }
 
